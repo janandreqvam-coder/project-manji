@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -51,9 +52,15 @@ export default function CarCard({ car }: CarCardProps) {
           <p>🏁 {car.class}</p>
         </div>
 
-        <button className="mt-6 w-full rounded-lg bg-red-600 py-3 font-bold transition hover:bg-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)]">
-          → View Build
-        </button>
+        <Link
+  href={`/garage/${car.name
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")}`}
+  className="mt-6 block w-full rounded-lg bg-red-600 py-3 text-center font-bold transition hover:bg-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)]"
+>
+  → View Build
+</Link>
 
       </div>
 
