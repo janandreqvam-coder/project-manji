@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="bg-zinc-950 py-24 text-white">
+    <section className="fade-up bg-zinc-950 py-24 text-white">
       <div className="mx-auto max-w-6xl px-6">
 
         <h2 className="mb-8 text-5xl font-black uppercase tracking-widest">

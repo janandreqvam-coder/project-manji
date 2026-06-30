@@ -1,5 +1,6 @@
+import DashboardStats from "./components/DashboardStats";
+import Dashboard from "./components/Dashboard";
 import CursorGlow from "./components/CursorGlow";
-import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Modes from "./components/Modes";
@@ -17,9 +18,11 @@ export default function Home() {
       
       <CursorGlow />
 
-      <Navbar />
-
       <Hero />
+
+      <DashboardStats />
+      
+      <Dashboard />
 
       <About />
 

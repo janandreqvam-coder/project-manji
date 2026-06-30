@@ -6,7 +6,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section className="bg-zinc-950 py-24">
+    <section className="fade-up bg-zinc-950 py-24">
       <div className="mx-auto max-w-6xl px-6">
 
         <h2 className="mb-10 text-5xl font-black uppercase text-white">

@@ -10,7 +10,7 @@ export default function Drivers() {
   return (
     <section
       id="drivers"
-      className="bg-zinc-950 py-24"
+      className="fade-up bg-zinc-950 py-24"
     >
 
       <div className="mx-auto max-w-7xl px-6">

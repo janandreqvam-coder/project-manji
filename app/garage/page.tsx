@@ -1,43 +1,6 @@
+import CarCard from "../components/garage/CarCard";
+import { cars } from "../data/data/cars";
 import Image from "next/image";
-
-const cars = [
-  {
-    name: "Nissan Silvia S15",
-    driver: "rob | WhtYaTalkinAbeet",
-    power: "420 HP",
-    class: "Drift",
-  },
-  {
-    name: "Nissan Skyline R32",
-    driver: "acid | MHQ",
-    power: "600 HP",
-    class: "Shutoko",
-  },
-  {
-    name: "Toyota Supra MK4",
-    driver: "bones13",
-    power: "720 HP",
-    class: "Racing",
-  },
-  {
-    name: "Mazda RX-7 FD",
-    driver: "Takumi",
-    power: "500 HP",
-    class: "Touge",
-  },
-  {
-    name: "Toyota Chaser",
-    driver: "Rin",
-    power: "450 HP",
-    class: "Drift",
-  },
-  {
-    name: "Nissan 180SX",
-    driver: "Ace",
-    power: "380 HP",
-    class: "Cruise",
-  },
-];
 
 export default function GaragePage() {
   return (
@@ -108,46 +71,7 @@ export default function GaragePage() {
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
           {cars.map((car) => (
-
-            <div
-              key={car.name}
-              className="overflow-hidden rounded-xl border border-red-600/20 bg-zinc-900 transition duration-300 hover:-translate-y-2 hover:border-red-500"
-            >
-
-              <Image
-                src={`/images/${car.name}.png`}
-                alt={car.name}
-                width={800}
-                height={500}
-                className="h-56 w-full object-cover"
-              />
-
-              <div className="p-6">
-
-                <h2 className="text-2xl font-bold">
-                  {car.name}
-                </h2>
-
-                <p className="mt-2 text-gray-400">
-                  Driver: {car.driver}
-                </p>
-
-                <p className="text-gray-400">
-                  Power: {car.power}
-                </p>
-
-                <p className="text-red-500">
-                  {car.class}
-                </p>
-
-                <button className="mt-6 w-full rounded-lg bg-red-600 py-3 font-bold transition hover:bg-red-500">
-                  View Build
-                </button>
-
-              </div>
-
-            </div>
-
+            <CarCard key={car.id} car={car} />
           ))}
 
         </div>
@@ -155,5 +79,5 @@ export default function GaragePage() {
       </section>
 
     </main>
-  );
+  )
 }
