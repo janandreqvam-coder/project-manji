@@ -9,7 +9,7 @@ export default function Dashboard() {
         <Card title="🟢 Server Status">
           <p className="text-3xl font-bold text-green-500">ONLINE</p>
           <p className="text-gray-400 mt-2">
-            148 Members Online
+            48 Members Online
           </p>
         </Card>
 
@@ -55,7 +55,7 @@ export default function Dashboard() {
 
         <Card title="🏆 Leaderboard">
           <p className="text-2xl font-bold">
-            #1 Ghost
+            #1 jan_driftking
           </p>
 
           <p className="mt-2 text-gray-400">
