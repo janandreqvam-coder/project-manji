@@ -22,7 +22,6 @@ export default function CarCard({ car }: CarCardProps) {
 
   return (
     <div className="overflow-hidden rounded-xl border border-red-600/20 bg-zinc-900 transition-all duration-300 hover:-translate-y-2 hover:border-red-500 hover:shadow-[0_0_30px_rgba(239,68,68,0.3)]">
-
       <div className="relative">
         <Image
           src={car.image}
@@ -41,10 +40,7 @@ export default function CarCard({ car }: CarCardProps) {
       </div>
 
       <div className="p-6">
-
-        <h2 className="text-2xl font-bold">
-          {car.name}
-        </h2>
+        <h2 className="text-2xl font-bold">{car.name}</h2>
 
         <div className="mt-3 space-y-1 text-sm text-gray-400">
           <p>👤 {car.driver}</p>
@@ -53,17 +49,15 @@ export default function CarCard({ car }: CarCardProps) {
         </div>
 
         <Link
-  href={`/garage/${car.name
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^a-z0-9-]/g, "")}`}
-  className="mt-6 block w-full rounded-lg bg-red-600 py-3 text-center font-bold transition hover:bg-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)]"
->
-  → View Build
-</Link>
-
+          href={`/garage/${car.name
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "")}`}
+          className="mt-6 block w-full rounded-lg bg-red-600 py-3 text-center font-bold transition hover:bg-red-500 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)]"
+        >
+          → View Build
+        </Link>
       </div>
-
     </div>
   );
 }
