@@ -1,3 +1,4 @@
+import Navbar from "./Navbar";
 import CherryBlossoms from "./CherryBlossoms";
 import Image from "next/image";
 import Rain from "./Rain";
@@ -8,6 +9,9 @@ export default function Hero() {
       id="home"
       className="relative flex h-screen items-center justify-center overflow-hidden"
     >
+
+      <Navbar />
+
       {/* Background */}
       <Image
         src="/images/hero.png"
